@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>App Name</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,7 +11,44 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+    
     <body>
-      <h1>Browser Template</h1>
+     <div id="signup">
+    <form id="sign-up-form">
+      <div class="field_container">
+      <input name="credentials[email]" type="email" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <input name="credentials[password_confirmation]" type="password" placeholder="password again">
+    <!-- add a class to button? class="button_text" -->
+      <button id="up" type="submit">Sign Up</button>
+      </div>
+    </form>
+    </div>
+
+   <div id="signin">
+    <form id="sign-in-form">
+      <div class="field_container">
+      <input name="credentials[email]" type="email" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <button id="sign" type="submit">Sign In</button>
+    </div>
+    </form>
+  </div>
+  <div id="change">
+    <form id="change-password-form">
+      <input name="passwords[old]" type="password" placeholder="Enter old password">
+      <input name="passwords[new]" type="password" placeholder="Enter new password">
+      <button type="submit">Change Password</button>
+    </form>
+  </div>    
+        
+    <h1>Your Name</h1>
+    <button id="sign-out-button">Sign Out</button>
+    <button id="new-account">New Wholesale Account</button>
+
+    <h2>Wholesale Accounts</h2>
+    
+
+    
     </body>
 </html>

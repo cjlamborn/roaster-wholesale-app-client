@@ -1,1 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
+button {
+    margin: 0;
+    padding: 0;
+    border: 2;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    line-height: 1;
+    font-family: inherit;
+    background-color: rgb(191, 201, 191);
+}
