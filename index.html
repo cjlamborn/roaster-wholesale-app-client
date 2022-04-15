@@ -41,14 +41,69 @@
       <button type="submit">Change Password</button>
     </form>
   </div>    
-        
-    <h1>Your Name</h1>
-    <button id="sign-out-button">Sign Out</button>
-    <button id="new-account">New Wholesale Account</button>
-
-    <h2>Wholesale Accounts</h2>
+    <button id="sign-out-button">Sign Out</button>    
+   <section id="auth-display"></section> 
     
+   <h1>Your Name</h1>
+  
+    <h2>Wholesale Accounts</h2>
+     <button id="new-account">New Wholesale Account</button>
+   <div id="create">
+      <form id="create-wholesale">
+        <div class="field_container">
+          <input name="wholesale[name]" type="text" placeholder="name">
+          <input name="wholesale[location]" type="text" placeholder="location">
+          <input name="wholesale[roasts]" type="text" placeholder="roasts">
+          <input name="wholesale[amount]" type="text" placeholder="amount">
+          <!-- add a class to button? class="button_text" -->
+          <button id="create-button" type="submit">Submit</button>
+        </div>
+      </form>
+      <div id="wholesale-create-message"></div>
+    </div>
+    
+    <div id="update">
+      <form id="update-account">
+        <div class="field_container">
+        <input name="book[id]" type='text' id="wholesale-id-update" placeholder="Wholesale ID Here" required>
+         <input name="wholesale[name]" type="text" placeholder="name">
+          <input name="wholesale[location]" type="text" placeholder="location">
+          <input name="wholesale[roasts]" type="text" placeholder="roasts">
+          <input name="wholesale[amount]" type="text" placeholder="amount">
+          <button type="submit">Update Account</button>
+        </div>
+      </form> 
+    </div>
+    <div id="wholesale-update-message"></div>
+      <hr>
+
+  <h2>Get All Wholesale Accounts</h2>
+    <div id="index">
+        <button id="wholesale-index">Get All</button>
+          <section id="index-display"></section>
+        </div>
+    <hr>
+
+  <h2>Get One Wholesale Account</h2>
+  <form id="show-account">
+    <input type="text" name="wholesale[id]" placeholder="Wholesale ID Here" required>
+    <button type="submit">Get Account</button>
+  </form>
+  <hr>
+
+  <h2>Delete One Account</h2>
+  <form id="delete-account">
+    <input name="wholesale[id]" type="text"  placeholder="Wholesale ID Here" required>
+    <button type="submit">Delete Account</button>
+  </form>
+  <div id="delete-account-message"></div>
+  <hr>
+  
+  <section>
+    <div id="error-message"></div>
+    <div id="wholesale-display"></div>
+  </section>
 
     
     </body>
-</html>
+</html> 
