@@ -12,3 +12,10 @@ require('./app/app.js')
 
 // styles
 require('./app/styles/index.scss')
+// const targetClick = document.getElementById('when-signed-in')
+// const butn = document.getElementById('sign')
+// butn.onclick = function () {
+//   if (targetClick.style.display !== 'none') {
+//     targetClick.style.display = 'flex'
+//   }
+// }

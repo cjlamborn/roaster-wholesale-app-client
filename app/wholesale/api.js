@@ -1,13 +1,16 @@
 'use strict'
 
 const config = require('./../config')
-
+const store = require('../store.js')
 // make GET request to /books to get all books
 // getting all of a resource is commonly called an index or list action
 const index = function () {
   return $.ajax({
     url: config.apiUrl + '/wholesales',
-    method: 'GET'
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
   })
 }
 
@@ -16,7 +19,10 @@ const index = function () {
 const show = function (id) {
   return $.ajax({
     url: config.apiUrl + '/wholesales/' + id,
-    method: 'GET'
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
   })
 }
 
@@ -25,7 +31,10 @@ const show = function (id) {
 const destroy = function (id) {
   return $.ajax({
     url: config.apiUrl + '/wholesales/' + id,
-    method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
   })
 }
 
@@ -33,8 +42,10 @@ const update = function (id, formData) {
   return $.ajax({
     url: config.apiUrl + '/wholesales/' + id,
     method: 'PATCH',
-    // include the book data that we will use to update the book
-    data: formData
+    data: formData,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
   })
 }
 
@@ -43,7 +54,10 @@ const create = function (formData) {
     url: config.apiUrl + '/wholesales',
     method: 'POST',
     // include the book data that we will use to create the book
-    data: formData
+    data: formData,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
   })
 }
 

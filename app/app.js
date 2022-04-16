@@ -15,6 +15,22 @@ $(() => {
   $('#delete-account').on('submit', wholesaleEvents.onDeleteWholesale)
   $('#update-account').on('submit', wholesaleEvents.onUpdateWholesale)
   $('#create-wholesale').on('submit', wholesaleEvents.onCreateWholesale)
-	  $('#wholesale-display').on('click', '.wholesale-delete-dynamic', wholesaleEvents.onDynamicDeleteWholesale)
-	  $('#wholesale-display').on('submit', '.wholesale-update-dynamic', wholesaleEvents.onDynamicUpdateWholesale)
+  $('.tab-one').on('click', function () {
+    $('.tab-one').show()
+    $('#signup').toggle('slide')
+  })
+  $('.tab-two').on('click', function () {
+    $('.tab-one').show()
+    $('#signin').toggle('slide')
+  })
+  $('#sign').on('click', function () {
+    $('.tab-three').show()
+    $('.tab-four').show()
+    $('#front-page').show()
+    $('#sign-in-form').toggle('slide')
+  })
+  $('.tab-three').on('click', function () {
+    $('.tab-three').show()
+    $('#change').toggle('slide')
+  })
 })

@@ -1,39 +1,36 @@
 'use strict'
+// const store = require('../store.js')
 
-const onIndexSuccess = function (responseData) {
+const onIndexSuccess = function (response) {
   // extract the books from the response's data into a variable
-  const wholesales = responseData.wholesales
+  const wholesaleProfiles = response.wholesale
 
   // log the information we get back from the API so we know how we can
   // interact with it.
-  console.log(responseData)
-
+  console.log(response)
+//   store.user = responseData.user
   // create a string that will store the html for all of the books we want to
   // display on the page. Start as an empty string.
   let wholesalesHtml = ''
 
   // loop through each book from the API
-  wholesales.forEach((wholesale) => {
+  wholesaleProfiles.forEach((wholesale) => {
     // add (concatenate) the book html for each book, to the booksHtml string
-    //
+    
     // when adding the delete button add a data-id attribute, with the id of the
     // button we want to delete
     // add a data-id attribute for our dynamic edit form as well
     wholesalesHtml += `
-      <h4>Name: ${wholesale.name}</h4>
-      <p>Location: ${wholesale.location}</p>
-      <p>Roasts: ${wholesale.roasts}</p>
-      <p>Amount: ${wholesale.amount}</p>
-      <p>ID: ${wholesale._id}</p>
-      <form class="wholesale-update-dynamic" data-id=${wholesale._id}>
-        <input type="text" name="wholesale[name]" placeholder="name" required>
-        <input type="text" name="wholesale[location]" placeholder="location" required>
-        <input type="text" name="wholesale[roasts]" placeholder="roasts" required>
-        <input type="text" name="wholesale[amount]" placeholder="amount" required>
-        <button type="submit">Update Account</button>
-      </form>
-      <button class='wholesale-delete-dynamic' data-id=${wholesale._id}>Delete Account</button>
-      <br>
+         <div id=${wholesale._id}>
+
+            <h3>Name: ${wholesale.name}</h4>
+           <div>
+            <p>Location: ${wholesale.location}</p>
+            <p>Roasts: ${wholesale.roasts}</p>
+            <p>Amount: ${wholesale.amount}</p>
+            <p>ID: ${wholesale._id}</p>
+            </div>
+         </div> 
     `
   })
 
@@ -41,17 +38,17 @@ const onIndexSuccess = function (responseData) {
   $('#wholesale-display').html(wholesalesHtml)
 }
 
-const onShowSuccess = function (responseData) {
+const onShowSuccess = function (response) {
   // log the information we get back from the API so we know how we can
   // interact with it.
-  console.log(responseData)
+  console.log(response)
 
   // build HTML element with data for one book
   const wholesaleHtml = `
-    <h4>Name: ${responseData.wholesale.name}</h4>
-    <p>Location: ${responseData.wholesale.location}</p>
-    <p>Roasts: ${responseData.wholesale.roasts}</p>
-    <p>Amount: ${responseData.wholesale.amount}</p>
+    <h4>Name: ${response.wholesale.name}</h4>
+    <p>Location: ${response.wholesale.location}</p>
+    <p>Roasts: ${response.wholesale.roasts}</p>
+    <p>Amount: ${response.wholesale.amount}</p>
     <br>
   `
 
