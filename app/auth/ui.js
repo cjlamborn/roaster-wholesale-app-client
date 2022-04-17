@@ -4,7 +4,9 @@ const store = require('../store.js')
 
 const onSignUpSuccess = function () {
   $('#auth-display').html('<p>User signed up successfully</p>')
-
+  setTimeout(() => {
+    $('#auth-display').html('')
+  }, 5000)
   $('form').trigger('reset')
 }
 
@@ -14,7 +16,9 @@ const onSignUpFailure = function () {
 
 const onSignInSuccess = function (response) {
   $('#auth-display').html('<p>User signed in successfully</p>')
-
+  setTimeout(() => {
+    $('#auth-display').html('')
+  }, 5000)
   // reset all forms
   $('form').trigger('reset')
 
@@ -32,7 +36,9 @@ const onSignInFailure = function () {
 
 const onChangePasswordSuccess = function () {
   $('#auth-display').html('<p>User changed password successfully</p>')
-
+  setTimeout(() => {
+    $('#auth-display').html('')
+  }, 5000)
   $('form').trigger('reset')
 }
 
@@ -42,7 +48,9 @@ const onChangePasswordFailure = function () {
 
 const onSignOutSuccess = function () {
   $('#auth-display').html('<p>User signed out successfully</p>')
-
+  setTimeout(() => {
+    $('#auth-display').html('')
+  }, 5000)
   $('form').trigger('reset')
 }
 
