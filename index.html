@@ -3,9 +3,12 @@
     <head>
       <title>App Name</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Rubik&display=swap" rel="stylesheet">
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -51,13 +54,19 @@
     
    <section id="auth-display"></section> 
    <div id="front-page">
-   <h1>Welcome</h1>
   
-    <h2>Wholesale Accounts</h2>
+   <h1>Welcome to your account</h1>
+  
+    <h3>Here as a roaster you will have access to all your wholesale accounts and keep track of orders</h3>
     </div>
-     <button id="new-account">New Wholesale Account</button>
-     
+
+    <div class="button-display">
+    <button class="button-33" id="view-account">View User Information</button>
+     </div>
+
+    
    <div id="create">
+     <button class="button-33" id="new-account">New Wholesale Account</button>
       <form id="create-wholesale">
         <div class="field_container">
           <input name="wholesale[name]" type="text" placeholder="name">
@@ -65,26 +74,27 @@
           <input name="wholesale[roasts]" type="text" placeholder="roasts">
           <input name="wholesale[amount]" type="text" placeholder="amount">
           <!-- add a class to button? class="button_text" -->
-          <button id="create-button" type="submit">Submit</button>
+          <button class="button-33" id="create-button" type="submit">Submit</button>
         </div>
       </form>
       <div id="wholesale-create-message"></div>
     </div>
-  <h2>Get One Wholesale Account</h2>
+  <div id="app-display">
+  <h2 class="text-display"></h2>
     <form id="show-account">
       <input type="text" name="wholesale[id]" placeholder="Wholesale ID Here" required>
-      <button type="submit">Get Account</button>
+      <button class="button-33" type="submit">Get Account</button>
     </form>
      <hr>
 
-  <h2>Get All Wholesale Accounts</h2>
+  <h2 class="text-display"></h2>
     <div id="index">
-        <button id="wholesale-index">Get All</button>
+        <button class="button-33" id="wholesale-index">Get All</button>
           <section id="index-display"></section>
         </div>
     <hr>
 
-  <h2>Update An Account</h2>
+  <h2 class="text-display">Update An Account</h2>
   <div id="update">
     <form id="update-account">
       <div class="field_container">
@@ -93,17 +103,17 @@
         <input name="wholesale[location]" type="text" placeholder="location">
         <input name="wholesale[roasts]" type="text" placeholder="roasts">
         <input name="wholesale[amount]" type="text" placeholder="amount">
-        <button id="update-button" type="submit">Update Account</button>
+        <button class="button-33" id="update-button" type="submit">Update Account</button>
       </div>
     </form>
   </div>
   <div id="wholesale-update-message"></div>
   <hr>
 
-  <h2>Delete One Account</h2>
+  <h2 class="text-display"></h2>
   <form id="delete-account">
     <input name="wholesale[id]" type="text"  placeholder="Wholesale ID Here" required>
-    <button id="delete-button">Delete Account</button>
+    <button class="button-33" id="delete-button">Delete Account</button>
   </form>
   <div id="delete-account-message"></div>
   <hr>
@@ -112,7 +122,7 @@
     <div id="error-message"></div>
     <div id="wholesale-display"></div>
   </section>
-
+</div>
     
     </body>
 </html> 

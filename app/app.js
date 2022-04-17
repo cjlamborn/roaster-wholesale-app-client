@@ -27,10 +27,42 @@ $(() => {
     $('.tab-three').show()
     $('.tab-four').show()
     $('#front-page').show()
+    $('#view-account').show()
     $('#sign-in-form').toggle('slide')
   })
   $('.tab-three').on('click', function () {
     $('.tab-three').show()
     $('#change').toggle('slide')
+  })
+  $('#view-account').on('click', function () {
+    $('#app-display').show()
+    $('#new-account').show()
+  })
+  $('#new-account').on('click', function () {
+    $('#create-wholesale').toggle()
+  })
+  $('.tab-four').on('click', function () {
+    if ($('.tab-four').text() === 'Sign Out') {
+      // This block is executed when
+      // you click the show button
+      $('.tab-four').text(' ')
+    }
+    $('.tab-three').hide()
+    $('#app-display').hide()
+    $('#new-account').hide()
+    $('#front-page').show()
+  })
+  $('#new-account').on('click', function () {
+    if ($('#new-account').text() === 'New Wholesale Account') {
+      // This block is executed when
+      // you click the show button
+      $('#new-account').text('Close')
+      $('#create-wholesale').show()
+    } else {
+      // This block is executed when
+      // you click the hide button
+      $('#new-account').text('New Wholesale Account')
+      $('#create-wholesale').hide()
+    }
   })
 })
