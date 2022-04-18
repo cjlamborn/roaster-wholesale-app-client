@@ -1,12 +1,12 @@
 'use strict'
 
-const config = require('./../config')
+// const config = require('./../config')
 const store = require('../store.js')
 // make GET request to /books to get all books
 // getting all of a resource is commonly called an index or list action
 const index = function () {
   return $.ajax({
-    url: config.apiUrl + '/wholesales',
+    url: 'https://polar-river-27993.herokuapp.com/wholesales',
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -18,7 +18,7 @@ const index = function () {
 // getting a single resource is commonly called a show or retrieve action
 const show = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/wholesales/' + id,
+    url: 'https://polar-river-27993.herokuapp.com/wholesales/' + id,
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -30,7 +30,8 @@ const show = function (id) {
 // deleting a single resource is commonly called a destroy action
 const destroy = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/wholesales/' + id,
+    url: 'https://polar-river-27993.herokuapp.com/wholesales/' +
+			id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -40,7 +41,8 @@ const destroy = function (id) {
 
 const update = function (id, formData) {
   return $.ajax({
-    url: config.apiUrl + '/wholesales/' + id,
+    url: 'https://polar-river-27993.herokuapp.com/wholesales/' +
+			id,
     method: 'PATCH',
     data: formData,
     headers: {
@@ -51,7 +53,7 @@ const update = function (id, formData) {
 
 const create = function (formData) {
   return $.ajax({
-    url: config.apiUrl + '/wholesales',
+    url: 'https://polar-river-27993.herokuapp.com/wholesales',
     method: 'POST',
     // include the book data that we will use to create the book
     data: formData,

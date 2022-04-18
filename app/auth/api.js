@@ -8,7 +8,7 @@ const signUp = function (data) {
   console.log(data)
   return $.ajax({
     method: 'POST',
-    url: 'http://localhost:4741/sign-up',
+    url: 'https://polar-river-27993.herokuapp.com/sign-up',
     data
     // same as data: data
   })
@@ -17,7 +17,7 @@ const signUp = function (data) {
 const signIn = function (data) {
   return $.ajax({
     method: 'POST',
-    url: 'http://localhost:4741/sign-in',
+    url: 'https://polar-river-27993.herokuapp.com/sign-in',
     data
     // same as data: data
   })
@@ -26,7 +26,7 @@ const signIn = function (data) {
 const changePassword = function (data) {
   return $.ajax({
     method: 'PATCH',
-    url: 'http://localhost:4741/change-password',
+    url: 'https://polar-river-27993.herokuapp.com/change-password',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -38,7 +38,7 @@ const changePassword = function (data) {
 const signOut = function () {
   return $.ajax({
     method: 'DELETE',
-    url: 'http://localhost:4741/sign-out',
+    url: 'https://polar-river-27993.herokuapp.com/sign-out',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
