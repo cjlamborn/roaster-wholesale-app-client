@@ -3,9 +3,6 @@
 const store = require('../store.js')
 
 const signUp = function (data) {
-  console.log('in API sign up')
-  console.log(store)
-  console.log(data)
   return $.ajax({
     method: 'POST',
     url: 'https://polar-river-27993.herokuapp.com/sign-up',

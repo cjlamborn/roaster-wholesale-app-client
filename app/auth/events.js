@@ -5,12 +5,9 @@ const getFormFields = require('../../lib/get-form-fields.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('now here')
-
   // get data from form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   if (data.credentials.password !== data.credentials.password_confirmation) {
     $('#auth-display').html('<p>Passwords do not match</p>')
@@ -34,7 +31,6 @@ const onSignIn = function (event) {
   // get data from form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   authApi
     .signIn(data)
@@ -48,7 +44,6 @@ const onChangePassword = function (event) {
   // get data from form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   authApi
     .changePassword(data)
@@ -69,27 +64,3 @@ module.exports = {
   onChangePassword,
   onSignOut
 }
-
-// $('#sign-up-form').on('submit', function (event) {
-//   event.preventDefault()
-
-//   const form = event.target
-//   const bookData = getFormFields(form)
-//   console.log(bookData) // returned JavaScript object
-// })
-
-// $('#sign-in-form').on('submit', function (event) {
-//   event.preventDefault()
-
-//   const form = event.target
-//   const bookData = getFormFields(form)
-//   console.log(bookData) // returned JavaScript object
-// })
-
-// $('#change-password-form').on('submit', function (event) {
-//   event.preventDefault()
-
-//   const form = event.target
-//   const bookData = getFormFields(form)
-//   console.log(bookData) // returned JavaScript object
-// })

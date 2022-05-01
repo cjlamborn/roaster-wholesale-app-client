@@ -20,20 +20,21 @@ $(() => {
     $('#signup').toggle('slide')
   })
   $('.tab-two').on('click', function () {
+    $('.tab-two').show()
     $('#signin').toggle('slide')
   })
-  $('#sign').on('click', function () {
-    $('.tab-one').hide()
-    $('.tab-two').hide()
-    $('.tab-three').show()
-    $('.tab-four').show()
-    $('#front-page').show()
-    $('#view-account').show()
-    $('#sign-in-form').toggle('slide')
-    $('body').css('background-image', 'none')
-    $('body').css('background-color', 'rgb(169, 145, 211)')
-    $('#intro').hide()
-  })
+  // $('#sign').on('click', function () {
+  //   $('.tab-one').hide()
+  //   $('.tab-two').hide()
+  //   $('.tab-three').show()
+  //   $('.tab-four').show()
+  //   $('#front-page').show()
+  //   $('#view-account').show()
+  //   $('#sign-in-form').toggle('slide')
+  //   $('body').css('background-image', 'none')
+  //   $('body').css('background-color', 'rgb(169, 145, 211)')
+  //   $('#intro').hide()
+  // })
   $('.tab-three').on('click', function () {
     $('.tab-three').show()
     $('#change').toggle('slide')
@@ -46,20 +47,20 @@ $(() => {
   $('#new-account').on('click', function () {
     $('#create-wholesale').toggle()
   })
-  $('.tab-four').on('click', function () {
-    $('.tab-one').show()
-    $('.tab-two').show()
-    if ($('.tab-four').text() === 'Sign Out') {
-      // This block is executed when
-      // you click the show button
-      $('.tab-four').text(' ')
-    }
-    $('.tab-three').hide()
-    $('#app-display').hide()
-    $('#new-account').hide()
-    $('#front-page').hide()
-    $('#view-account').hide()
-  })
+  // $('.tab-four').on('click', function () {
+  //   $('.tab-one').show()
+  //   $('.tab-two').show()
+  //   if ($('.tab-four').text() === 'Sign Out') {
+  //     // This block is executed when
+  //     // you click the show button
+  //     $('.tab-four').text(' ')
+  //   }
+  //   $('.tab-three').hide()
+  //   $('#app-display').hide()
+  //   $('#new-account').hide()
+  //   $('#front-page').hide()
+  //   $('#view-account').hide()
+  // })
   $('#new-account').on('click', function () {
     if ($('#new-account').text() === 'New Wholesale Account') {
       // This block is executed when

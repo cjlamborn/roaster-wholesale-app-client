@@ -66,7 +66,6 @@ const onUpdateWholesale = function (event) {
 
   // extract the id from our formData's book
   const id = formData.wholesale.id
-  console.log(event.target)
   // make API call to update one book with the data we grabbed from the form
   api
     .update(id, formData)

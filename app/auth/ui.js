@@ -19,10 +19,19 @@ const onSignInSuccess = function (response) {
   setTimeout(() => {
     $('#auth-display').html('')
   }, 5000)
+  $('.tab-one').hide()
+  $('.tab-two').hide()
+  $('.tab-three').show()
+  $('.tab-four').show()
+  $('#front-page').show()
+  $('#view-account').show()
+  $('#sign-in-form').toggle('slide')
+  $('body').css('background-image', 'none')
+  $('body').css('background-color', 'rgb(169, 145, 211)')
+  $('#intro').hide()
   // reset all forms
   $('form').trigger('reset')
 
-  console.log(response)
   // store data from the response in my store object
   store.user = response.user
 
@@ -51,6 +60,18 @@ const onSignOutSuccess = function () {
   setTimeout(() => {
     $('#auth-display').html('')
   }, 5000)
+  $('.tab-one').show()
+  $('.tab-two').show()
+  if ($('.tab-four').text() === 'Sign Out') {
+    // This block is executed when
+    // you click the show button
+    $('.tab-four').text(' ')
+  }
+  $('.tab-three').hide()
+  $('#app-display').hide()
+  $('#new-account').hide()
+  $('#front-page').hide()
+  $('#view-account').hide()
   $('form').trigger('reset')
 }
 

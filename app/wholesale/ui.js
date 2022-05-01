@@ -7,8 +7,7 @@ const onIndexSuccess = function (response) {
 
   // log the information we get back from the API so we know how we can
   // interact with it.
-  console.log(response)
-//   store.user = responseData.user
+  //   store.user = responseData.user
   // create a string that will store the html for all of the books we want to
   // display on the page. Start as an empty string.
   let wholesalesHtml = ''
@@ -16,7 +15,6 @@ const onIndexSuccess = function (response) {
   // loop through each book from the API
   wholesaleProfiles.forEach((wholesale) => {
     // add (concatenate) the book html for each book, to the booksHtml string
-    
     // when adding the delete button add a data-id attribute, with the id of the
     // button we want to delete
     // add a data-id attribute for our dynamic edit form as well
@@ -41,7 +39,6 @@ const onIndexSuccess = function (response) {
 const onShowSuccess = function (response) {
   // log the information we get back from the API so we know how we can
   // interact with it.
-  console.log(response)
 
   // build HTML element with data for one book
   const wholesaleHtml = `
@@ -134,9 +131,8 @@ const onCreateSuccess = function () {
   $('form').trigger('reset')
 }
 
-const onError = function (err) {
-  // log the error for debugging purposes
-  console.error(err)
+const onError = function () {
+  // log the error for debugging purpose
 
   // display a message to the user to let them know what they were doing did
   // not work correctly

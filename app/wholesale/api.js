@@ -30,8 +30,7 @@ const show = function (id) {
 // deleting a single resource is commonly called a destroy action
 const destroy = function (id) {
   return $.ajax({
-    url: 'https://polar-river-27993.herokuapp.com/wholesales/' +
-			id,
+    url: 'https://polar-river-27993.herokuapp.com/wholesales/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -41,8 +40,7 @@ const destroy = function (id) {
 
 const update = function (id, formData) {
   return $.ajax({
-    url: 'https://polar-river-27993.herokuapp.com/wholesales/' +
-			id,
+    url: 'https://polar-river-27993.herokuapp.com/wholesales/' + id,
     method: 'PATCH',
     data: formData,
     headers: {
