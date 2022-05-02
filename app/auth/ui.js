@@ -26,8 +26,7 @@ const onSignInSuccess = function (response) {
   $('#front-page').show()
   $('#view-account').show()
   $('#sign-in-form').toggle('slide')
-  $('body').css('background-image', 'none')
-  $('body').css('background-color', 'rgb(169, 145, 211)')
+  $('#sign-up-form').toggle('slide')
   $('#intro').hide()
   // reset all forms
   $('form').trigger('reset')
@@ -62,6 +61,7 @@ const onSignOutSuccess = function () {
   }, 5000)
   $('.tab-one').show()
   $('.tab-two').show()
+  $('#signin').toggle('slide')
   if ($('.tab-four').text() === 'Sign Out') {
     // This block is executed when
     // you click the show button
