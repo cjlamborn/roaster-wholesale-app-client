@@ -61,7 +61,6 @@ const onSignOutSuccess = function () {
   }, 5000)
   $('.tab-one').show()
   $('.tab-two').show()
-  $('#signin').toggle('slide')
   if ($('.tab-four').text() === 'Sign Out') {
     // This block is executed when
     // you click the show button
