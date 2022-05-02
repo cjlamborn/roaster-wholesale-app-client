@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>App Name</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Rubik&display=swap" rel="stylesheet">
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    
+    <body>
+      <div class="tab">
+        <button class="tab-one">Sign Up</button>
+        <button class="tab-two">Sign In</button>
+        <button class="tab-three">Change Password</button>
+        <button class="tab-four" id="sign-out-button">Sign Out</button>
+      </div>
+     <div id="signup">
+    <form id="sign-up-form">
+      <div class="field_container">
+      <input name="credentials[email]" type="email" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <input name="credentials[password_confirmation]" type="password" placeholder="password again">
+    <!-- add a class to button? class="button_text" -->
+      <button class="button-33" id="up" type="submit">Submit</button>
+      </div>
+    </form>
+    </div>
+
+   <div id="signin">
+    <form id="sign-in-form">
+      <div class="field_container">
+      <input name="credentials[email]" type="email" placeholder="email">
+      <input name="credentials[password]" type="password" placeholder="password">
+      <button class="button-33" id="sign" type="submit">Submit</button>
+    </div>
+    </form>
+  </div>
+  <div id="change">
+    <h4>Change Password</h4>
+    <form id="change-password-form">
+      <input name="passwords[old]" type="password" placeholder="Enter old password">
+      <input name="passwords[new]" type="password" placeholder="Enter new password">
+      <button class="button-33" type="submit">Change Password</button>
+    </form>
+  </div>    
+    
+   <section id="auth-display"></section> 
+  <div id="intro">
+    <h1>Hello!
+    </h1>
+    <h2>Keep Track Of Your Wholesale Accounts</h2>
+    <h2>All In One Place</h2>
+    <h3>New Users Sign Up</h3>
+    <h3>Returning Users Sign In</h3>
+  </div>
+
+   <div id="front-page">
+  
+   <h1>Welcome to your account</h1>
+  
+    <h3>Here as a roaster you will have access to all your wholesale accounts and keep track of orders</h3>
+    </div>
+
+    <div class="button-display">
+    <button class="button-33" id="view-account">View User Information</button>
+     </div>
+
+    
+   <div id="create">
+     <button class="button-33" id="new-account">New Wholesale Account</button>
+      <form id="create-wholesale">
+        <div class="field_container">
+          <input name="wholesale[name]" type="text" placeholder="name">
+          <input name="wholesale[location]" type="text" placeholder="location">
+          <input name="wholesale[roasts]" type="text" placeholder="roasts">
+          <input name="wholesale[amount]" type="text" placeholder="amount">
+          <!-- add a class to button? class="button_text" -->
+          <button class="button-33" id="create-button" type="submit">Submit</button>
+        </div>
+      </form>
+      <div id="wholesale-create-message"></div>
+    </div>
+  <div id="app-display">
+  <h2 class="text-display"></h2>
+    <form id="show-account">
+      <input type="text" name="wholesale[id]" placeholder="Wholesale ID Here" required>
+      <button class="button-33" type="submit">Get Account</button>
+    </form>
+     <hr>
+
+  <h2 class="text-display"></h2>
+    <div id="index">
+        <button class="button-33" id="wholesale-index">Get All</button>
+          <section id="index-display"></section>
+        </div>
+    <hr>
+
+  <h2 class="text-display">Update An Account</h2>
+  <div id="update">
+    <form id="update-account">
+      <div class="field_container">
+        <input name="wholesale[id]" type="text" id="wholesale-id-update" placeholder="Wholesale ID Here" required>
+        <input name="wholesale[name]" type="text" placeholder="name">
+        <input name="wholesale[location]" type="text" placeholder="location">
+        <input name="wholesale[roasts]" type="text" placeholder="roasts">
+        <input name="wholesale[amount]" type="text" placeholder="amount">
+        <button class="button-33" id="update-button" type="submit">Update Account</button>
+      </div>
+    </form>
+  </div>
+  <div id="wholesale-update-message"></div>
+  <hr>
+
+  <h2 class="text-display"></h2>
+  <form id="delete-account">
+    <input name="wholesale[id]" type="text"  placeholder="Wholesale ID Here" required>
+    <button class="button-33" id="delete-button">Delete Account</button>
+  </form>
+  <div id="delete-account-message"></div>
+  <hr>
+  
+  <section>
+    <div id="error-message"></div>
+    <div id="wholesale-display"></div>
+  </section>
+</div>
+    
+    </body>
+</html> 
